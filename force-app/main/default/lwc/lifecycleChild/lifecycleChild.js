@@ -10,7 +10,6 @@ export default class LifecycleChild extends LightningElement {
     connectedCallback() {
         console.log('child connectedcallback has been called.');
         throw new Error("Error occured while getting the things done.");
-        
     }
 
     renderedCallback() {
