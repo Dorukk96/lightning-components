@@ -1,0 +1,25 @@
+<template>
+    <div class="app">
+
+        <lightning-card icon-name="standard:calibration" title="Select a Category">
+            <div class="slds-var-m-around_medium">
+                <lightning-combobox
+                  name="category"
+                  label="Category"
+                  value={selectedValue}
+                  options={categoryOpts}
+                  required
+                  onchange={onChangeHandler}>
+                </lightning-combobox>
+            </div>
+        </lightning-card>
+
+
+        <lightning-card>
+            <lightning-map
+              map-markers={mapMarkers}>
+            </lightning-map>
+        </lightning-card>
+        <lightning-card></lightning-card>
+    </div>
+</template>
