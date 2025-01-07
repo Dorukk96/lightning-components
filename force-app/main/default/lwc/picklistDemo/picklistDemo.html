@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="custom:custom6" title="Picklist Demo - 6">
+      <div class="slds-var-m-horizontal_medium">
+          
+        <!-- Picklist with City Options -->
+        <lightning-combobox
+          name="cities"
+          label="Select City"
+          value={selectedCity}
+          options={cityOptions}
+          onchange={handleCityChange}>
+        </lightning-combobox>
+
+        <br/>
+
+        <!-- lwc:if will work on text or number or object any data. 
+          if data is NOT NULL, NOT UNDEFINED, NOT BLANK it will show data, 
+          else it will hide it. -->
+        <template lwc:if={selectedCity}>
+          <i><b>Selected city is {selectedCity}</b></i>
+        </template>
+
+      </div>
+    </lightning-card>
+</template>

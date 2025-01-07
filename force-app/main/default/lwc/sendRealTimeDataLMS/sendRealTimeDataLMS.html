@@ -1,0 +1,28 @@
+<template>
+    <lightning-card icon-name="custom:custom10" title="Send Real Time Data">
+        <div class="slds-var-m-around_large">
+
+            <lightning-input
+              label="Enter some text"
+              onchange={textChangeHandler}>
+            </lightning-input>
+
+            <lightning-slider 
+              max="10"
+              min="0"
+              step="2"
+              type="horizontal"
+              value={sliderVal}
+              onchange={sliderChangeHandler}>
+            </lightning-slider>
+
+            <lightning-button 
+              class="slds-var-m-top_large slds-align_absolute-center"
+              variant="brand"
+              label="Publish" 
+              onclick={publishHandler}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

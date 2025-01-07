@@ -1,0 +1,19 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card icon-name="standard:case" title="Get Cases via Apex using wire">
+        <div class="slds-var-m-around_large">
+            
+            <!-- display case records using datatable -->
+            <template lwc:if={myCases}>
+                <lightning-datatable
+                    key-field="id"
+                    data={myCases}
+                    columns={caseColumns}
+                    show-row-number-column
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

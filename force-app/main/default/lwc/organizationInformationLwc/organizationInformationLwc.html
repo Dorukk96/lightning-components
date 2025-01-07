@@ -1,0 +1,12 @@
+<template>
+    <lightning-card icon-name="custom:custom43" title="organization information">
+        <div class="slds-var-m-horizontal_large">
+            <template lwc:if={orgDetails}>
+                <p>Org name => {orgDetails.Name}</p>
+                <p>Phone number => {orgDetails.Phone}</p>
+                <p>Fax number => {orgDetails.Fax}</p>
+                <p>City => {orgDetails.City}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

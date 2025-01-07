@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <div class="slds-var-p-around_medium">
+            <div class="grid-container">
+                <template if:true={dbProperties}>
+                    <template for:each={dbProperties} for:item="property">
+                        <c-property-tile 
+                            key={property.Picture__c} 
+                            city-name={property.City__c} 
+                            bed-amount={property.Beds__c} 
+                            bath-amount={property.Baths__c}
+                            price={property.Price__c} 
+                            img-url={property.Picture__c}>
+                        </c-property-tile>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

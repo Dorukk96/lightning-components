@@ -1,0 +1,75 @@
+<template>
+    <lightning-card icon-name="custom:custom30" title="Update Record function for product">
+        <div class="slds-var-m-horizontal_large">
+
+            <!-- Some product fields -->
+            <form class="productForm">
+
+                <!-- Name/Title field (input text) -->
+                <template lwc:if={myProd}>
+                    <lightning-input 
+                        type="text"
+                        label="Title"
+                        name="Name"
+                        value={myProd.fields.Name.value}
+                        onchange={handleChange}>
+                    </lightning-input>
+                
+
+                    <!-- Type field (combobox) -->
+                    <lightning-combobox
+                        name="Type__c"
+                        label="Type"
+                        value={myProd.fields.Type__c.value}
+                        options={myTypeOptions}
+                        onchange={handleChange}>
+                    </lightning-combobox>
+
+                    <!-- Brand field (input text) -->
+                    <lightning-input 
+                        type="text"
+                        label="Brand"
+                        value={myProd.fields.Brand__c.value}
+                        name="Brand__c"
+                        onchange={handleChange}>
+                    </lightning-input>
+
+                    <!-- Description field (lightning textarea) -->
+                    <lightning-textarea 
+                        label="Description"
+                        name="Description__c"
+                        max-length="1000"
+                        value={myProd.fields.Description__c.value}
+                        placeholder="type here...">
+                    </lightning-textarea>
+
+                    <!-- Price field (number) -->
+                    <lightning-input 
+                        type="number"
+                        label="Price"
+                        name="Price__c"
+                        value={myProd.fields.Price__c.value}
+                        onchange={handleChange}>
+                    </lightning-input>
+                </template>
+
+                <!-- Save/Cancel Buttons -->
+                <div class="slds-align_absolute-center slds-var-m-top_large">
+                    <lightning-button 
+                        class="slds-var-m-right_small"
+                        variant="neutral" 
+                        label="Cancel"
+                        onclick={handleChange}>
+                    </lightning-button>
+                    <lightning-button
+                        variant="brand" 
+                        label="Update" 
+                        onclick={handleSaveClick}>
+                    </lightning-button>
+                </div>
+
+            </form>
+
+        </div>
+    </lightning-card>
+</template>

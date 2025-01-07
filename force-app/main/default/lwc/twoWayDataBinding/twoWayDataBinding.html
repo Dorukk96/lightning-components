@@ -1,0 +1,26 @@
+<template>
+    <lightning-card icon-name="custom:custom3" title="Two Way Data Binding - 3">
+      <div class="slds-var-m-horizontal_medium">
+          <!-- Card Body -->
+          <b>Full name is {fullName}. And country is {country}</b>
+          <br/>
+
+          <!-- Input Element for Fullname-->
+          <lightning-input 
+            type="text"
+            label="Full Name"
+            value={fullName}
+            onchange={handleNameChange}>
+          </lightning-input>
+
+          <!-- Input for country -->
+          <lightning-input 
+            type="text"
+            label="Country"
+            value={country}
+            onchange={handleCountryChange}>
+          </lightning-input>
+
+      </div>
+    </lightning-card>
+</template>

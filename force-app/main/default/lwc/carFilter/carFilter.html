@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="CAR EXPLORER" icon-name="custom:custom31">
+        <div class="slds-var-m-around_large slds-align_absolute-center" >
+            <template if:true={categoryOptions}>
+                <lightning-combobox
+                    class="filter"
+                    variant="label-hidden"
+                    options={categoryOptions}
+                    value={selectedCategory}
+                    onchange={changeHandler}>
+                </lightning-combobox>
+            </template>
+        </div>
+    </lightning-card>
+</template>

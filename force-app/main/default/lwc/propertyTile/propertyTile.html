@@ -1,0 +1,12 @@
+<template>
+    <div class="main-box slds-var-p-around_small">
+        <img class="img-sizes" src={imgUrl} alt={imgUrl}>
+        <div class="info-box">
+            <h3>{cityName}</h3>
+            <p>Beds: {bedAmount} - Baths: {bathAmount}</p>
+            <lightning-formatted-number value={price} format-style="currency" currency-code="USD"
+                currency-display-as="symbol">
+            </lightning-formatted-number>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,11 @@
+.other-details {
+    background-color: lightgrey;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 16px 0px 0px 6px;
+    padding: 6px;
+}
+
+img {
+    border-radius: 10px;
+}

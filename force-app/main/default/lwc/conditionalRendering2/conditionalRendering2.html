@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="custom:custom8" title="Conditional Rendering2 - 8">
+      <div class="slds-var-m-horizontal_medium">
+
+        <!-- Button to change the display message section -->
+        <lightning-button 
+          variant="brand"
+          label="Show/Hide Data" 
+          onclick={handleClick}>
+        </lightning-button>
+
+        <br/>
+        <br/>
+        
+        <!-- Display the message conditionally -->
+        <template lwc:if={showData}>
+            showData is TRUE, so we can see this data.
+        </template>
+        <template lwc:else>
+            showData is FALSE.
+        </template>
+
+      </div>
+    </lightning-card>
+</template>

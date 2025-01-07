@@ -1,0 +1,21 @@
+<template>
+    <lightning-card icon-name="standard:contact" title="Contact Search">
+        <div class="slds-var-m-around_large">
+            
+            <!-- Search Input box -->
+            <lightning-input 
+                type="search" 
+                label="Search contact with name"
+                onchange={handleSearchChange}>
+            </lightning-input>
+
+            <!-- display result in the child component -->
+            <c-display-results 
+                records={contacts} 
+                columns={column} 
+                errors={error}>
+            </c-display-results>
+
+        </div>
+    </lightning-card>
+</template>

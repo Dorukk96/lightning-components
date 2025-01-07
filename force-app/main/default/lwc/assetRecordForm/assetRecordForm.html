@@ -1,0 +1,16 @@
+<template>
+    <lightning-card icon-name="custom:custom12" title="Lightning Record Form Demo 2">
+      <div class="slds-var-m-horizontal_medium">
+          
+        <!-- Asset record form (2 columns) -->
+        <lightning-record-form
+          columns="2"
+          layout-type="Full"
+          object-api-name={objectName}
+          record-id={recordId}
+          onsuccess={handleOnSuccess}>
+        </lightning-record-form>
+
+      </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+.bg-card-decoration {
+    background-color: #b2ad7f;
+    color: #6b5b95;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 1.2rem 1.6rem;
+
+    height: 120px;
+
+    font-size: 14px;
+    font-weight: bold;
+}

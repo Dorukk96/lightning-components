@@ -1,0 +1,12 @@
+<template>
+    <lightning-card icon-name="custom:custom46" title="Parent Lwc Event">
+        <div class="slds-var-m-around_large">
+            <div class="slds-align_absolute-center">
+                Child button count: {count}
+            </div>
+            <c-child-click-lwc-event 
+                onchildbuttonclick={handleChildButtonClick}>
+            </c-child-click-lwc-event>
+        </div>
+    </lightning-card>
+</template>

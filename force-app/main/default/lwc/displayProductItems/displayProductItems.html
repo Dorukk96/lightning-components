@@ -1,0 +1,21 @@
+<template>
+    <lightning-card icon-name="custom:custom12" title="Product Items">
+        <div class="slds-var-m-around_medium">
+            <template if:true={fetchedProduct}>
+                <template for:each={fetchedProduct} for:item="product">
+                    <div class="slds-var-m-around_medium" key={product.Id}>
+                        <h1>{product.Name}</h1>
+
+                        <lightning-formatted-number 
+                          value={product.Unit_Price__c}
+                          format-style="currency"
+                          currency-code="USD">
+                        </lightning-formatted-number> <br>
+                        
+                        <p>{product.Description__c}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

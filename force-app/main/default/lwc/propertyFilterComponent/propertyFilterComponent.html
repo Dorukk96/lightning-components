@@ -1,0 +1,51 @@
+<template>
+    <lightning-card class="filter-card" icon-name="standard:calibration" title="Filter">
+        
+        <lightning-button
+          slot="actions" 
+          variant="brand-outline"
+          label="Reset" 
+          onclick={resetHandler}>
+        </lightning-button>
+
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+              label="Search Key"
+              name="search-box"
+              onchange={onchangeHandler}>
+            </lightning-input>
+
+            <lightning-slider 
+              label="Max Price" 
+              name="price-slider"
+              max="1200000"
+              min="0"
+              step="50000"
+              value={val}
+              onchange={onchangeHandler}>
+            </lightning-slider>
+
+            <lightning-slider 
+              label="Bedrooms" 
+              name="bedroom-slider"
+              max="6"
+              min="0"
+              step="1"
+              value={val}
+              onchange={onchangeHandler}>
+            </lightning-slider>
+
+            <lightning-slider 
+              label="Bathrooms" 
+              name="bathroom-slider"
+              max="6"
+              min="0"
+              step="1"
+              value={val}
+              onchange={onchangeHandler}>
+            </lightning-slider>
+
+            
+        </div>       
+    </lightning-card>
+</template>

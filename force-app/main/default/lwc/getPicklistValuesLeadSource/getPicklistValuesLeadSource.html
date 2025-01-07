@@ -1,0 +1,29 @@
+<template>
+    <lightning-card icon-name="standard:lead" title="Get picklist info of Lead Source">
+        <div class="slds-var-m-horizontal_large">
+            
+            <!-- show the picklist only if the leadSourceOptions is available -->
+            <template lwc:if={leadSourceOptions}>
+                <strong>
+                    <lightning-combobox
+                        name="leadsource"
+                        label="Lead Source"
+                        options={leadSourceOptions}
+                        onchange={handleLeadSourceChange}>
+                    </lightning-combobox>
+                </strong>
+            </template>
+
+            <br/>
+
+            <!-- show the text only if the selectedLeadSource is available -->
+            <template lwc:if={selectedLeadSource}>
+                <div class="slds-align_absolute-center" style="background-color: #2E2E2E; border-radius: 12px; padding: 8px;">
+                    <b><i style="color: #2190F3">Selected lead source is => </i></b>
+                    <i><b style="color: #F44336;">{selectedLeadSource}</b></i>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

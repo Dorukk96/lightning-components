@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Create Property">
+        <div class="slds-var-m-around_small">
+
+            <!-- Property Name Input -->
+            <lightning-input
+              label="Property Name"
+              name="property-name"
+              required>
+            </lightning-input>
+
+            <!-- Description Input -->
+            <lightning-input
+              label="Description"
+              name="desc">
+            </lightning-input>
+
+            <!-- Broker Search Box -->
+            <lightning-combobox
+              name="search-broker"
+              label="Broker"
+              value={value}
+              options={options}
+              onchange={brokerSelectHandler}>
+            </lightning-combobox>
+
+            <!-- Price Input -->
+            <lightning-input 
+              type="currency"
+              label="Price"
+              name="price"
+              value="100000"
+              required>
+            </lightning-input>
+
+            <!-- Next Button -->
+            <div class="slds-var-m-top_medium button-layout">
+                <lightning-button 
+                    variant="brand"
+                    label="Next" 
+                    onclick={nextHandler}>
+                </lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

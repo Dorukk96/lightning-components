@@ -1,0 +1,15 @@
+<template>
+    <lightning-card icon-name="custom:custom2" title="Searching Item by Category">
+        <div class="slds-var-m-around_large slds-align_absolute-center">
+
+            <!-- Search manufacturer picklist -->
+            <lightning-combobox
+              name="category"
+              value={catOption}
+              options={categoryOptions}
+              onchange={chooseCategoryHandler}>
+            </lightning-combobox>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,52 @@
+<template>
+    <lightning-card icon-name="custom:custom12" title="LMS Calculator Publisher">
+        <div class="slds-var-m-around_medium">
+
+            <!-- first num input -->
+            <lightning-input type="number" name="first-number" label="Enter the first number"
+                onchange={changeNumberHandler}>
+            </lightning-input> <br>
+
+            <!-- second num input -->
+            <lightning-input type="number" name="second-number" label="Enter the second number"
+                onchange={changeNumberHandler}>
+            </lightning-input> <br>
+
+            <lightning-slider label="Range" max="50" min="0" step="5" type="horizontal" value={sliderValue}
+                variant="standard" onchange={changeSliderHandler}>
+            </lightning-slider> <br>
+
+            <!-- Image Uploader Section -->
+            <lightning-input 
+              type="file"
+              label="Upload an image"
+              onchange={imageSelectHandler}>
+            </lightning-input>
+
+            <!-- Add button & Send Slider Value Button -->
+            <div class="slds-var-m-around_large slds-align_absolute-center">
+                <lightning-button 
+                    variant="brand" 
+                    label="ADD" 
+                    onclick={addHandler}>
+                </lightning-button>
+
+                <lightning-button 
+                    class="slds-var-m-left_medium"
+                    variant="neutral" 
+                    label="Send Slider Value" 
+                    onclick={sendValueHandler}>
+                </lightning-button>
+
+                <lightning-button 
+                    class="slds-var-m-left_medium"
+                    variant="destructive" 
+                    label="Send Image" 
+                    onclick={sendImageHandler}>
+                </lightning-button>
+            </div>
+
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,50 @@
+<template>
+    <lightning-card icon-name="custom:custom7" title="Data Transfer Publisher">
+        <div class="slds-var-m-around_medium">
+
+            <!-- first name input -->
+            <lightning-input
+              name="first-name"
+              required
+              label="Enter your first name"
+              onchange={changeHandler}>
+            </lightning-input>
+
+            <!-- last name input -->
+            <lightning-input
+              name="last-name"
+              required
+              label="Enter your last name"
+              onchange={changeHandler}>
+            </lightning-input>
+
+            <!-- email input -->
+            <lightning-input
+              name="email-name"
+              required
+              type="email"
+              label="Enter your email"
+              onchange={changeHandler}>
+            </lightning-input>
+
+            <!-- choice picklist values -->
+            <lightning-combobox
+              name="progress"
+              required
+              label="Progress"
+              value={selectedOption}
+              options={progressOptions}
+              onchange={changeHandler}>
+            </lightning-combobox>
+
+            <!-- Publish Button -->
+            <lightning-button 
+              class="slds-var-m-top_large slds-align_absolute-center"
+              variant="brand-outline"
+              label="Publish Data" 
+              onclick={publishDataHandler}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

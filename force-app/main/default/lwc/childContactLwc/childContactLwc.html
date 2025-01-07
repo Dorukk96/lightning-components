@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-var-m-around_large">
+        <lightning-input 
+            type="text"
+            label="Contact Last Name"
+            value = {lastName}
+            onchange={handleNameChange}>
+        </lightning-input>
+        <br/>
+        <lightning-input 
+            type="email"
+            label="Contact Email"
+            value={email}
+            onchange={handleEmailChange}>
+        </lightning-input>
+
+    </div>
+</template>

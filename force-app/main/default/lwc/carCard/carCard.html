@@ -1,0 +1,36 @@
+<template>
+    <template if:true={recordId}>
+        <lightning-card title={name}>
+            <div class="slds-var-m-around_medium">
+                <div>
+                    <img src={pictureUrl} alt="Car Image" />
+                </div>
+                <lightning-record-view-form
+                    record-id={recordId}
+                    object-api-name={objectName}
+                    onload={handleRecordLoaded}
+                    density="compact">
+                    <section>
+                        <lightning-output-field field-name={fields.maker}></lightning-output-field>
+                        <lightning-output-field field-name={fields.category}></lightning-output-field>
+                        <lightning-output-field field-name={fields.price}></lightning-output-field>
+                    </section>
+                    <section>
+                        <div class="other-details">Other Details</div>
+                        <lightning-output-field field-name={fields.control}></lightning-output-field>
+                        <lightning-output-field field-name={fields.fuelType}></lightning-output-field>
+                        <lightning-output-field field-name={fields.seating}></lightning-output-field>
+                        <lightning-output-field field-name={fields.desc}></lightning-output-field>
+                    </section>
+                </lightning-record-view-form>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={recordId}>
+        <lightning-card>
+            <div class="slds-var-m-around_medium">
+                Please select a car in order to see the full details
+            </div>
+        </lightning-card>
+    </template>
+</template>

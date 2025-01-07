@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-var-m-around_medium">
+        <template lwc:if={record}>
+            {record.name} <br/>
+            {record.description} <br/>
+
+            <template lwc:if={record.url}>
+                <img 
+                    src={record.url} 
+                    alt="display product">
+            </template>
+
+        </template>
+    </div>
+</template>

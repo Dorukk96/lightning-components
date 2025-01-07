@@ -1,0 +1,16 @@
+<template>
+    <lightning-card icon-name="custom:custom10" title="Template Looping Demo2 - 10">
+      <div class="slds-var-m-horizontal_medium">
+          
+        <template for:each={accs} for:item="eachAccount">
+            <div class="slds-box" key={eachAccount.Id}>
+                <p><i>{eachAccount.Name}</i></p>
+                <p><i>{eachAccount.Phone}</i></p>
+                <p><i>{eachAccount.AccountNumber}</i></p>
+                <p><i>{eachAccount.Status}</i></p>
+            </div>
+        </template>
+
+      </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,37 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card icon-name="standard:account" title="Get accounts by industry imperative call">
+        <div class="slds-var-m-around_large">
+            <!-- add some content here... -->
+            
+            <!-- get industry picklist -->
+            <template lwc:if={industryOptions}>
+                <i>
+                    <lightning-combobox
+                        name="Industry"
+                        label="Industry"
+                        options={industryOptions}
+                        onchange={handleIndustryChange}>
+                    </lightning-combobox>
+                </i>
+            </template>
+
+            <!-- sldsValidatorIgnoreNextLine -->
+            <template lwc:if={showDatatable}>
+                <!-- display datatable -->
+                <br/>
+                <lightning-datatable
+                    key-field="Id"
+                    data={accounts}
+                    columns={accColumn}>
+                </lightning-datatable>
+            </template>
+            <template lwc:else>
+                <div class="slds-var-m-top_large slds-align_absolute-center">
+                    <b>No records found. Add some...</b>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

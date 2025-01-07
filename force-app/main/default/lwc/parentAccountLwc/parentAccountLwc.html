@@ -1,0 +1,37 @@
+<template>
+    <lightning-card icon-name="standard:account" title="Account and Contact Save, parent child communication">
+        <div class="slds-var-m-around_large">
+
+            <!-- Account name search box -->
+            <lightning-input 
+                type="text"
+                label="Account Name"
+                value={accName}
+                onchange={handleAccNameChange}>
+            </lightning-input>
+            <br/>
+            
+            <!-- Centered 'Save & Reset' buttons -->
+            <div class="slds-align_absolute-center button-box">
+                <lightning-button 
+                    class="slds-var-m-right_medium"
+                    variant="brand" 
+                    label="Save"  
+                    onclick={handleSaveChange}>
+                </lightning-button>
+                <lightning-button 
+                    variant="neutral" 
+                    label="Reset"  
+                    onclick={handleResetChange}>
+                </lightning-button> 
+            </div>
+
+            <hr/> <!-- add some horizontal line -->
+
+            <!-- child component here -->
+            <c-child-contact-lwc></c-child-contact-lwc>
+        
+        </div>
+
+    </lightning-card>
+</template>
