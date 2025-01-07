@@ -1,0 +1,22 @@
+.main-app-container {
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    column-gap: 14px;
+    row-gap: 14px;
+}
+
+@keyframes widthTransition {
+    from {
+        width: 0px;
+    } to {
+        width: 100%;
+    }
+}
+.main-section-card {
+    animation: widthTransition 3s forwards ease-in;
+}
+
+.button_layout {
+    display: flex;
+    justify-content: flex-end;
+}
