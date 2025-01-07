@@ -11,6 +11,7 @@ export default class LifecycleParent extends LightningElement {
         console.log('parent connectedcallback has been called.');
     }
 
+    // rendered call back here
     renderedCallback() {
         console.log('parent renderedcallback has been called.');
     }
